@@ -1,0 +1,71 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#search-box {
+  margin-top: 50px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 80%; /* Responsive width for the input */
+  max-width: 400px; /* Max width for larger screens */
+}
+
+.petal {
+  position: absolute;
+  top: -50px;
+  width: 30px;
+  height: 30px;
+  background-image: url('https://example.com/petal.png'); /* Replace with a real petal image */
+  background-size: cover;
+  opacity: 0;
+  animation: fall 5s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes fall {
+  0% {
+    top: -50px;
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
+
+/* Mobile-First Adjustments */
+@media (max-width: 768px) {
+  #search-box {
+    font-size: 16px; /* Adjust font size on smaller screens */
+  }
+
+  .petal {
+    width: 20px; /* Smaller petal size for mobile */
+    height: 20px; /* Smaller petal size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  #search-box {
+    font-size: 14px; /* Even smaller font size on very small screens */
+  }
+
+  .petal {
+    width: 15px; /* Even smaller petal size for very small screens */
+    height: 15px; /* Even smaller petal size for very small screens */
+  }
+}
