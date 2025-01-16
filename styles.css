@@ -29,7 +29,7 @@ body {
   top: -50px;
   width: 30px;
   height: 30px;
-  background-image: url('https://example.com/petal.png'); /* Replace with a real petal image */
+  background-image: url('petal.png'); /* Replace with a real petal image */
   background-size: cover;
   opacity: 0;
   animation: fall 5s linear infinite;
